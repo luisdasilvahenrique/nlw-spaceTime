@@ -5,8 +5,18 @@ import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
 import { memoriesRoutes } from './routes/memories'
 import { authRoutes } from './routes/auth'
+import  multipart  from '@fastify/multipart'
+import { uploadRoutes } from './routes/upload'
+import { resolve } from 'node:path'
 
 const app = fastify()
+
+app.register(multipart)
+
+app.register(require('fastify-static'), {
+  root: resolve(__dirname, '../uploads'),
+  prefix: '/uploads/', //se der erro pode ser isso
+})
 
 app.register(cors, {
   origin: true,
@@ -17,6 +27,7 @@ app.register(jwt, {
 })
 
 app.register(authRoutes)
+app.register(uploadRoutes)
 app.register(memoriesRoutes)
 
 app
