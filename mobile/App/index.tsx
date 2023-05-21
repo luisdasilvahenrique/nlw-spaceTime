@@ -1,20 +1,11 @@
 import { useEffect } from "react";
-import { StatusBar } from "expo-status-bar";
 import * as SecureStore from "expo-secure-store";
-import { ImageBackground, Text, View, TouchableOpacity } from "react-native";
-import {
-  useFonts,
-  Roboto_400Regular,
-  Roboto_700Bold,
-} from "@expo-google-fonts/roboto";
+import { Text, View, TouchableOpacity } from "react-native";
+
 import { api } from "../src/lib/api";
-import { BaiJamjuree_700Bold } from "@expo-google-fonts/bai-jamjuree";
-import { styled } from "nativewind";
 import { makeRedirectUri, useAuthRequest } from "expo-auth-session";
 import { useRouter } from "expo-router";
 
-import blurBg from "../src/assets/bg-blur.png";
-import Stripes from "../src/assets/stripes.svg";
 import NLWLogo from "../src/assets/nlw-spaceTime-logo.svg";
 
 const discovery = {
@@ -24,16 +15,8 @@ const discovery = {
     "https://github.com/settings/connections/applications/50d255ecc40b316799aa",
 };
 
-const StyledStripes = styled(Stripes);
-
 export default function App() {
   const router = useRouter();
-
-  const [hasLoaderFonts] = useFonts({
-    Roboto_400Regular,
-    Roboto_700Bold,
-    BaiJamjuree_700Bold,
-  });
 
   const [response, signWithGithub] = useAuthRequest(
     {
@@ -76,16 +59,8 @@ export default function App() {
     }
   }, [response]);
 
-  if (!hasLoaderFonts) {
-    return null;
-  }
   return (
-    <ImageBackground
-      imageStyle={{ position: "absolute", left: "-100%" }}
-      source={blurBg}
-      className="relative flex-1 items-center bg-gray-900 px-8 py-10"
-    >
-      <StyledStripes className="absolute left-2" />
+    <View className="flex-1 items-center px-8 py-10">
 
       <View className="flex-1 items-center justify-center">
         <NLWLogo />
@@ -116,7 +91,6 @@ export default function App() {
         Feito com 💜 no NLW da Rocketseat
       </Text>
 
-      <StatusBar style="light" translucent />
-    </ImageBackground>
+    </View>
   );
 }
