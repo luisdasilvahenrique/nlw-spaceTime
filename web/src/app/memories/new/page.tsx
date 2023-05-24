@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Camera, ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { NewMemoryForm } from "@/components/NewMemoryForm";
 
 export default function NewMemory() {
