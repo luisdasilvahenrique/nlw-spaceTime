@@ -1,6 +1,6 @@
 'use client'
 
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from "react"
 
 export function MediaPicker() {
   const [preview, setPreview] = useState<string | null>(null)
