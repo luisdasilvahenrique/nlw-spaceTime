@@ -9,7 +9,7 @@ export function MediaPicker() {
     const { files } = event.target
 
     if (!files) {
-      return
+      return ""
     }
 
     const previewURL = URL.createObjectURL(files[0])
