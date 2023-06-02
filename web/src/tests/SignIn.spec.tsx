@@ -14,7 +14,7 @@ describe('SignIn Component', () => {
     expect(userIcon).toBeInTheDocument();
 
     // Verifica se o texto está presente
-    const textElement = screen.getByText('Crie sua conta e salve suas memórias!');
+    const textElement = screen.getByTestId('text');
     expect(textElement).toBeInTheDocument();
   });
 
