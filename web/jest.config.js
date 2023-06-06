@@ -4,5 +4,9 @@ module.exports = {
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
     transform: {
       '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+      '\\.(svg)$': 'jest-transform-stub',
+    },
+    moduleNameMapper: {
+      '^../lib/auth$': '../lib/auth.ts',
     },
   };
