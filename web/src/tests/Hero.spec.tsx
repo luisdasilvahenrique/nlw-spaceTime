@@ -8,9 +8,9 @@ describe('Hero Component', () => {
     render(<Hero />);
     
     // Verifica se o logotipo está presente
-    const logoImage = screen.getByRole('img', { name: /NLW spaceTime/i });
+    const logoImage = screen.getByTestId('logo');
     expect(logoImage).toBeInTheDocument();
-    expect(logoImage).toHaveAttribute('src', nlwLogo);
+    expect(logoImage).toHaveAttribute('src' ,nlwLogo);
     expect(logoImage).toHaveAttribute('alt', 'NLW spaceTime');
 
     // Verifica se o título está presente
