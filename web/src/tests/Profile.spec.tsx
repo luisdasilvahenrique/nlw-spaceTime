@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Profile } from '../components/Profile';
 
-jest.mock('../lib/auth', () => ({
+jest.mock('@/lib/auth', () => ({
   getUser: jest.fn(() => ({
     avatarUrl: 'https://example.com/avatar.jpg',
     name: 'John Doe',

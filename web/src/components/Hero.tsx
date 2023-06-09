@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Hero() {
   return (
     <div className="space-y-5">
-      <Image src={nlwLogo} alt="NLW spaceTime" />
+      <Image src={nlwLogo} data-testid="logo" alt="NLW spaceTime" />
 
       <div className="max-w-[420px] space-y-4">
         <h1 className="text-5xl font-bold leading-tight text-gray-50">
