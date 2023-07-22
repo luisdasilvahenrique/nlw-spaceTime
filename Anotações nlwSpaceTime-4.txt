@@ -1,0 +1,20 @@
+nlw-SpaceTime 
+
+Aula 4
+
+Application Web
+
+Install tailwindForm:
+npm i @tailwindcss/forms -D
+
+Install Fastify multipart:
+npm i @fastify/multipart
+
+Install Fastify/Static:
+npm i @fastify/static
+
+exp://192.168.1.7:19000
+
+exp://rmlsawy.luis-henrique.19000.exp.direct
+
+npx expo start --tunnel

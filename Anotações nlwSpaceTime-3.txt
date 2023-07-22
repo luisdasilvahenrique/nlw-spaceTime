@@ -1,0 +1,37 @@
+nlw-spaceTime 
+
+aula 3
+
+Application back-end
+
+Install dotenv:
+npm i dotenv -D
+
+Install axios:
+npm i axios
+
+Install jwt:
+npm i @fastify/jwt
+
+Application Web: 
+npm i axios
+npm i jwt-decode
+
+Application Mobile
+
+npx expo install expo-auth-session expo-crypto
+
+Exec expo 
+npx expo start --tunnel
+exp://rmlsawy.luis-henrique.19000.exp.direct
+
+Install axios
+npm i axios
+
+Secure store expo:
+npx expo install expo-secure-store
+
+expo router:
+npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
+
+

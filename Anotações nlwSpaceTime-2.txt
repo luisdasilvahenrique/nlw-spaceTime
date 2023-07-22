@@ -1,0 +1,23 @@
+nlw-spaceTime --> Aula 2
+
+Application Web
+
+Install Package Icons (lucide)
+npm i lucide-react
+
+Application Mobile
+
+Install SVG: use npx case does not expo install globally
+npx expo install react-native-svg
+
+Install svg transformer: 
+npm i react-native-svg-transformer 
+
+For clear the cache:
+npx expo start --clear
+
+Install Zod:
+npm i zod
+
+Install Cors:
+npm install @fastify/cors
